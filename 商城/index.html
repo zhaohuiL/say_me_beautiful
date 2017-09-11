@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="css/reset.css">
+	</head>
+	<body>
+		<iframe src="common.html"></iframe>
+
+
+			<div id="banner">
+				<div id="banner-box">
+					<ul id="bannerimg">
+						<li class="imgli"><a href="#"><img src="img/banner1.jpg"></a></li>
+						<li class="imgli"><a href="#"><img src="img/banner2.jpg"></a></li>
+						<li class="imgli"><a href="#"><img src="img/banner3.jpg"></a></li>
+					</ul>
+					<i class="leftBtn"></i>
+					<i class="rightBtn"></i>
+				</div>
+				<ul id="circles">
+					<li></li>
+					<li></li>
+					<li></li>
+				</ul>
+
+			</div>
+		</div>
+		<div id="goods-box">
+			<ul id="hot-goods"></ul>
+		</div>
+	</body>
+	<script src="js/myajax.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/animate.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		if(localStorage.username){
+			var oUsername =  document.querySelector('a[name=username]');
+			var oLogout = document.querySelector('.logout');
+			oUsername.innerText = localStorage.username;
+			oUsername.style.display = 'inline';
+			oLogout.style.display = 'inline';
+		}else{
+			var oRegister = document.querySelector('.register');
+			var oLogin = document.querySelector('.login');
+			oRegister.style.display = 'inline';
+			oLogin.style.display = 'inline';
+		}
+	</script>
+	<!-- 搜索部分 -->
+	<script>
+		var oSearchButton = document.querySelector('#search-button');
+		var oSearchInput = document.querySelector('#search');
+		oSearchButton.addEventListener('click',search,false);
+		oSearchInput.onkeyup = function(event){
+			if(event.keyCode === 13){
+				search();
+			}
+		}
+		function search(){
+			location.href = 'search.html?search_text=' + oSearchInput.value;
+		}
+	</script>
+	<script>
+		var oCat = document.querySelector('#cat');
+		myajax.get('http://h6.duchengjiu.top/shop/api_cat.php', {}, function(error, responseText){
+				var json = JSON.parse(responseText);//返回的整个json对象
+				var data = json.data;//json对象当中的data是一个数组
+				for (var i = 0; i < data.length; i++) {
+					var obj = data[i];//数组里面的每一项是一个商品分类的对象
+					oCat.innerHTML += `<li><a href="list.html?cat_id=${obj.cat_id}">${obj.cat_name}</a></li>`;
+				}
+		});
+	</script>
+	<!-- 轮播图效果 -->
+	<script>
+		var oBannerBox = document.getElementById("banner-box");
+		var oBannerBoxUl = document.getElementById('bannerimg');
+		var oLiImgs = oBannerBoxUl.getElementsByTagName('li');
+		var leftBtn = document.querySelector('.leftBtn');
+		var rightBtn = document.querySelector('.rightBtn');
+		var circlesLi = document.querySelector('#circles').getElementsByTagName('li');
+		var imgLength = oLiImgs.length;
+		console.log(imgLength);
+		var width = 1200;
+		var animatetime = 1000;
+		var tween = "QuadEaseInOut";
+		var interval = 2000;
+		var lock = true;
+		oBannerBoxUl.appendChild(oLiImgs[0].cloneNode(true));
+		var nowimg = 0;
+		rightBtn.onclick = rightBtnHandler;
+		var timer = setInterval(rightBtnHandler,interval);
+		oBannerBox.onmouseover = function(){
+			clearInterval(timer);
+		}
+		oBannerBox.onmouseout = function(){
+			timer =  setInterval(rightBtnHandler,interval);
+		}
+		function rightBtnHandler(){
+			if(oBannerBoxUl.isanimated) return;
+			nowimg++;
+			changeCircle();
+			animate(oBannerBoxUl,{'left':-width*nowimg},animatetime,tween,function(){
+				if(nowimg > imgLength - 1){
+					nowimg = 0;
+					this.style.left = '0px';
+				}
+			});
+		}
+		leftBtn.onclick = function(){
+			if(oBannerBoxUl.isanimated) return;
+			nowimg--;
+			if(nowimg < 0){
+				nowimg = imgLength - 1;
+				oBannerBoxUl.style.left = -width * imgLength + 'px';
+			}
+			changeCircle();
+			animate(oBannerBoxUl,{"left":-width * nowimg},animatetime,tween);
+		}
+		for(var i = 0;i <= imgLength - 1 ; i++ ){
+			circlesLi[i].index = i;
+			circlesLi[i].onclick = function(){
+				if(oBannerBoxUl.isanimated) return;
+				nowimg = this.index;
+				animate(oBannerBoxUl,{"left":-width * nowimg},animatetime,tween);
+				changeCircle();
+			}
+		}
+		function changeCircle(){
+			var n = nowimg;
+			if( n === imgLength){
+				n = 0;
+			}
+			for(var i = 0; i < imgLength;i++){
+				circlesLi[i].className = '';
+			}
+			circlesLi[n].className = 'cur';
+		}
+	</script>
+	<!-- 吸顶效果 -->
+	<!--<script type="text/javascript">
+		var oCatBox = document.querySelector("#cat-box");
+		var topDis = getAllTop(oCatBox);
+		window.onscroll = function(e){
+			var nowTop = document.documentElement.scrollTop || document.body.scrollTop;
+			if(nowTop >= topDis){
+				oCatBox.style.postion = 'fixed';
+				oCatBox.style.marginTop = 0;
+			}else{
+				oCatBox.style.postion ='relative';
+				// oCatBox.style.marginTop = topDis + 'px';
+			}
+		};
+		function getAllTop(obj){
+			var allTop = obj.offsetTop;
+			while (obj = obj.offsetParent) {
+				allTop += obj.offsetTop;
+			}
+			return allTop;
+		}
+	</script>-->
+	<!-- 热门商品部分 -->
+	<script type="text/javascript">
+		var oGoods = document.querySelector('#hot-goods');
+		myajax.get('http://h6.duchengjiu.top/shop/api_goods.php',{},
+		function(err,responseText){
+			var json = JSON.parse(responseText);
+			var data = json.data;
+			for(var i = 0; i<data.length;i++){
+				var obj = data[i];
+				oGoods.innerHTML += `<li>
+					<a href="#">
+						<img src="${obj.goods_thumb}">
+						<i>¥${obj.price}</i>
+						<p>${obj.goods_name}</p>
+					</a>
+				</li>`;
+			}
+		});
+	</script>
+</html>
