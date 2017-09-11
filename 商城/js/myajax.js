@@ -70,3 +70,14 @@
     return arr.join('&');
   }
 })();
+function getQueryString(name) {
+  var search = location.search.substr(1);
+  //abc=123&a=&ccc=abc
+  //(^|&)   (&|$)
+  //abc=([^&]*)
+  var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
+  var result = search.match(reg);
+  // if (result === null) return null;
+  // return decodeURIComponent(result[2]);
+  return result === null ? null : decodeURIComponent(result[2]);
+}

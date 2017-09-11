@@ -1,0 +1,50 @@
+table{
+	width:1200px;
+	margin: 0 auto;
+	background: white;
+	text-align: center;
+	line-height: 80px;
+}
+tr{
+	height: 80px;
+	overflow: hidden;
+}
+td{
+	margin: 0px;
+	padding-top: 0px;
+	height: 80px;
+}
+.choose{
+	width:100px;
+}
+.goods img{
+	width:80px;
+	height:80px;
+}
+.goods div{
+	float:left;
+}
+.goods{
+	width:490px;
+}
+.goods-img{
+	width:80px;
+	height:80px;
+}
+.goods-name{
+	width:410px;
+	height:80px;
+	text-align: left;
+}
+.number{
+	width:100px;
+}
+.price{
+	width:100px;
+}
+.sum{
+	width:100px;
+}
+.use{
+	width:100px;
+}

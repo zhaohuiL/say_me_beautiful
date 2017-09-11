@@ -1,0 +1,201 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+#all-header{
+	width: 100%;
+	height: 30px;
+	background: #f8f8f8;
+}
+#header{
+	width: 1200px;
+	height: 30px;
+	margin: auto;
+	font-size: 12px;
+	line-height: 30px;
+}
+.header-left{
+	float: left;
+}
+.header-right{
+	float: right;
+}
+.header-right li{
+	float: left;
+	width: 110px;
+	height: 30px;
+	text-align: center;
+}
+#all-logo{
+	width: 100%;
+	background: #f4f4f4;
+}
+#logo{
+	width: 1200px;
+	height: 65px;
+	margin: auto;
+}
+.logo-left{
+	background: url(../img/170411_4j7i7db3l1k3l8a10aie8hdi7h9fc_288x78.png) no-repeat;
+	background-size: 144px 39px;
+	float: left;
+	width: 225px;
+	height: 48px;
+	margin-top: 14px;
+}
+.logo-right{
+	float: right;
+	width: 494px;
+	height: 23px;
+	margin: 21px 0;
+}
+.logo-right>div{
+	width: 23px;
+	height: 23px;
+	border-radius: 50%;
+	margin-right:120px;
+	float: left;
+	background-color: #dddddd;
+	color: white;
+	text-align: center;
+	line-height: 23px;
+}
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+	background: #f4f4f4;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+#all-header{
+	width: 100%;
+	height: 30px;
+	background: #f8f8f8;
+}
+#header{
+	width: 1200px;
+	height: 30px;
+	margin: auto;
+	font-size: 12px;
+	line-height: 30px;
+}
+.header-left{
+	float: left;
+}
+.header-right{
+	float: right;
+}
+.header-right li{
+	float: left;
+	width: 110px;
+	height: 30px;
+	text-align: center;
+}
+#all-logo{
+	width: 100%;
+	background: #f4f4f4;
+}
+#logo{
+	width: 1200px;
+	height: 65px;
+	margin: auto;
+}
+.logo-left{
+	background: url(../img/170411_4j7i7db3l1k3l8a10aie8hdi7h9fc_288x78.png) no-repeat;
+	background-size: 144px 39px;
+	float: left;
+	width: 225px;
+	height: 48px;
+	margin-top: 14px;
+}
+.logo-right{
+	float: right;
+	width: 494px;
+	height: 23px;
+	margin: 21px 0;
+}
+.logo-right>div{
+	width: 23px;
+	height: 23px;
+	border-radius: 50%;
+	margin-right:120px;
+	float: left;
+	background-color: #dddddd;
+	color: white;
+	text-align: center;
+	line-height: 23px;
+}
