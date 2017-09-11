@@ -70,6 +70,7 @@
     return arr.join('&');
   }
 })();
+<<<<<<< HEAD
 function getQueryString(name) {
   var search = location.search.substr(1);
   //abc=123&a=&ccc=abc
@@ -81,3 +82,5 @@ function getQueryString(name) {
   // return decodeURIComponent(result[2]);
   return result === null ? null : decodeURIComponent(result[2]);
 }
+=======
+>>>>>>> 309cddecbff6d3b0652d6d55fc8968bdb06dfcb2
