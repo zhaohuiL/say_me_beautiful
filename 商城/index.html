@@ -6,7 +6,6 @@
 		<link rel="stylesheet" href="css/reset.css">
 	</head>
 	<body>
-<<<<<<< HEAD
 		<div id="header">
 
 			<div id="header-list">
@@ -35,11 +34,6 @@
 					<li style="border-bottom:2px solid #ff3366;"><a href="index.html">首页</a></li>
 				</ul>
 			</div>
-=======
-		<iframe src="common.html"></iframe>
->>>>>>> 309cddecbff6d3b0652d6d55fc8968bdb06dfcb2
-
-
 			<div id="banner">
 				<div id="banner-box">
 					<ul id="bannerimg">
@@ -55,7 +49,6 @@
 					<li></li>
 					<li></li>
 				</ul>
-
 			</div>
 		</div>
 		<div id="goods-box">
@@ -82,7 +75,6 @@
 	<script>
 		var oSearchButton = document.querySelector('#search-button');
 		var oSearchInput = document.querySelector('#search');
-<<<<<<< HEAD
 		oSearchButton.onclick=function(){
 			location.href = 'commen.html?search_text=' + oSearchInput.value;
 		}
@@ -92,8 +84,7 @@
 			}
 		}
 		function search(){
-			location.href = 'commen.html?search_text=' + oSearchInput.value;
-=======
+			location.href = 'commen.html?search_text=' + oSearchInput.value;}
 		oSearchButton.addEventListener('click',search,false);
 		oSearchInput.onkeyup = function(event){
 			if(event.keyCode === 13){
@@ -102,7 +93,6 @@
 		}
 		function search(){
 			location.href = 'search.html?search_text=' + oSearchInput.value;
->>>>>>> 309cddecbff6d3b0652d6d55fc8968bdb06dfcb2
 		}
 	</script>
 	<script>
@@ -214,11 +204,7 @@
 			for(var i = 0; i<data.length;i++){
 				var obj = data[i];
 				oGoods.innerHTML += `<li>
-<<<<<<< HEAD
 					<a href="goods.html?goods_id=${obj.goods_id}">
-=======
-					<a href="#">
->>>>>>> 309cddecbff6d3b0652d6d55fc8968bdb06dfcb2
 						<img src="${obj.goods_thumb}">
 						<i>¥${obj.price}</i>
 						<p>${obj.goods_name}</p>
