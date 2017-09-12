@@ -1,0 +1,101 @@
+.goodsall{
+	margin-top: 50px;
+}
+.goodsall>div{
+	float: left;
+}
+.goods-img img{
+	width:400px;
+	height:400px;
+}
+.goods-img{
+	width:400px;
+	height:400px;
+	margin-left:200px;
+}
+.goods-another{
+	margin-left:50px;
+}
+.goods-name{
+	width: 700px;
+	font-size: 23px;
+	line-height: 60px;
+	font-weight: 600;
+}
+.goods-price,#goods-priceall{
+	color:  #ef2f23;
+	font-size: 20px;
+	font-weight: 700;
+}
+#add-to-cart{
+	margin-top: 40px;
+	width:150px;
+	height:50px;
+	color: white;
+	background-color: #ef2f23;
+	font-size: 16px;
+	border: none;
+	cursor: pointer;
+}
+.goodS-price{
+	background-color: #f9f9f9;
+	height:50px;
+	width:700px;
+	line-height: 50px;
+}
+.goods-priceafter{
+	float: right;
+	margin-right: 30px;
+}
+.goods-number span{
+	display: inline-block;
+	width:40px;
+	height:25px;
+	text-align:center;
+	margin-top: 0px;
+}
+.goods-number {
+	margin-top: 40px;
+	margin-bottom: 40px;
+}
+.goods-number button{
+	border:1px solid #dddddd;
+	background-color: white;
+	width: 25px;
+	height:25px;
+}
+#goods-leftBtn{
+	margin-left: 20px;
+}
+#hide{
+	width:560px;
+	height:130px;
+	border:1px solid #DDDDDD;
+	position: absolute;
+	left:50%;
+	top:50%;
+	margin-left: -350px;
+	z-index:99;
+	background-color: white;
+	text-align:center;
+}
+#hide p{
+	margin-top: 25px;
+	margin-bottom: 20px;
+}
+#hide a{
+	display: inline-block;
+	line-height: 40px;
+	width: 165px;
+	height:40px;
+	text-decoration: none;
+	color: white;
+	background-color: #ef2f23;
+}
+#hide span{
+	cursor: pointer;
+	position: absolute;
+	top:10px;
+	right:10px;
+	
+}

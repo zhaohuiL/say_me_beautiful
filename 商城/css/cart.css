@@ -1,0 +1,122 @@
+body{
+	background-color:#f4f4f4 ;
+}
+#hiddle{
+	position: absolute;
+	width:1200px;
+	height:250px;
+	top: 98px;
+	left: 192px;
+	background-color: white;
+	margin: 0 auto;
+	text-align: center;
+}
+#hiddle dt{
+	margin-top: 60px;
+	margin-bottom: 30px;
+}
+#hiddle dd{
+	margin-top: 20px;
+}
+.hiddle-img{
+	position: absolute;
+	width: 100px;
+	height: 80px;
+	top: 60px;
+	left: 300px;
+	background: url(../img/1blhwf_ie2tiobvhfrdkojrgezdambqhayde_360x900.png) no-repeat -190px -120px;
+}
+#yable{
+	width:1200px;
+	margin: 0 auto;
+	background: white;
+	text-align: center;
+	line-height: 80px;
+	padding: 30px;
+	font-size: 14px;
+}
+#yable tr{
+	height: 100px;
+	width: 1200px;
+	border: 1px solid #F3ECDB;
+}
+#yable td{
+	height: 80px;
+}
+.choose{
+	width:100px;
+	text-align: left;
+}
+.goods img{
+	width:80px;
+	height:80px;
+}
+.goods div{
+	float:left;
+}
+.goods{
+	width:490px;
+}
+.goods-img{
+	width:80px;
+	height:80px;
+	margin-right: 20px;
+}
+.goods-name{
+	width:400px;
+	height:80px;
+	line-height: 40px;
+	text-align: left;
+}
+.number{
+	width:100px;
+}
+.price{
+	width:100px;
+}
+.sum,.suma{
+	width:100px;
+	height:80px;
+	line-height: 80px;
+}
+.suma{
+	color: red;
+}
+#sum{
+	color: red;
+	font-size: 20px;
+}
+.use{
+	width:100px;
+}
+.all{
+	width:1200px;
+	height: 40px;
+	margin: 0 auto;
+	background-color: white;
+	line-height: 40px;
+}
+.checkbox{
+	margin-left: 40px;
+	
+}
+#clear-cart{
+	margin-left: 65px;
+}
+#run{
+	display: inline-block;
+	margin-left: 500px;
+	margin-right: 80px;
+}
+#pay{
+	float: right;
+	display: inline-block;
+	width:150px;
+	height:40px;
+	color: black;
+	text-align: center;
+	text-decoration: none;
+}
+#runa{
+	color:red;
+}
